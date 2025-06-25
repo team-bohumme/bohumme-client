@@ -32,7 +32,7 @@ module.exports = {
           ['^node:'],
           ['^react$', '^@?\\w'],
           ['^@bofit/'],
-          //TODO add more specific imports ex)   ['^@shared/'],@shared/ 별칭으로 시작하는 모듈
+          //TODO add more specific imports ex)   ['^@shared/'], @shared/ 별칭으로 시작하는 모듈
           ['^\\u0000'],
           ['^\\.'],
           ['^.+\\.css$'],
