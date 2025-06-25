@@ -1,7 +1,17 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "extends": "@bofit/typescript/react.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "plugins": [{ "name": "react" }],
+    "paths": {
+      // "@shared/*": ["src/shared/*"],
+      // "@pages/*": ["src/pages/*"]
+    }
+  },
+  "include": [
+    "src",
+    "vite.config.ts",
+    "../../packages/design-system/src/hooks/use-click-outside.ts"
+  ],
+  "exclude": ["node_modules"]
 }
