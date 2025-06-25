@@ -30,6 +30,9 @@ importers:
       prettier:
         specifier: ^3.6.1
         version: 3.6.1
+      turbo:
+        specifier: ^2.5.4
+        version: 2.5.4
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
