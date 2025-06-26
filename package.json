@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
     "preview": "vite preview"
   },
   "dependencies": {
