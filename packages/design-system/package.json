@@ -11,6 +11,7 @@
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
+    "@bofit/eslint": "workspace:*",
     "@bofit/typescript": "workspace:*",
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
