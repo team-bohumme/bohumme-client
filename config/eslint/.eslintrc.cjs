@@ -16,7 +16,7 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    curly: ['warn', 'all'],
+    curly: ['error', 'all'],
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': [
