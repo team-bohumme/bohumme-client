@@ -1,5 +1,5 @@
 {
-  "name": "@bofit/design-system",
+  "name": "@bds/ui",
   "version": "0.1.0",
   "private": true,
   "exports": {

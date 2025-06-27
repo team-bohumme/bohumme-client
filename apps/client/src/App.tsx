@@ -1,4 +1,4 @@
-import { Button } from '@bofit/design-system';
+import { Button } from '@bds/ui';
 
 function App() {
   return (
