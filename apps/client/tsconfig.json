@@ -4,11 +4,9 @@
     "baseUrl": ".",
     "plugins": [{ "name": "react" }],
     "paths": {
-      "@app/*": ["src/app/*"],
       "@pages/*": ["src/pages/*"],
       "@widgets/*": ["src/widgets/*"],
-      "@shared/*": ["src/shared/*"],
-      "@features/*": ["src/features/*"] // 스프린트 기간을 위한 디렉토리
+      "@shared/*": ["src/shared/*"]
     }
   },
   "include": [
