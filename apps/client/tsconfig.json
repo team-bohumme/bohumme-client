@@ -4,8 +4,9 @@
     "baseUrl": ".",
     "plugins": [{ "name": "react" }],
     "paths": {
-      // "@shared/*": ["src/shared/*"],
-      // "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@shared/*": ["src/shared/*"]
     }
   },
   "include": [
