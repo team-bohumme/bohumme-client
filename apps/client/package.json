@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@bds/ui": "workspace:*",
+    "@tanstack/react-query": "^5.81.5",
+    "@tanstack/react-query-devtools": "^5.81.5",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "react": "^19.1.0",
