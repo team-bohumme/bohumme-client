@@ -1,12 +1,12 @@
 import { Button } from '@bds/ui';
 
-import Page from '@pages/community/Page';
+import CommunityPage from '@pages/community/CommunityPage';
 
 function App() {
   return (
     <>
       <Button />
-      <Page />
+      <CommunityPage />
     </>
   );
 }
