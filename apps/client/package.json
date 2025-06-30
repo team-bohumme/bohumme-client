@@ -25,6 +25,8 @@
     "globals": "^16.2.0",
     "typescript": "~5.8.3",
     "@vanilla-extract/css": "*",
-    "vite": "^7.0.0"
+    "@vanilla-extract/vite-plugin": "*",
+    "@vanilla-extract/sprinkles": "*",
+    "vite": "*"
   }
 }
