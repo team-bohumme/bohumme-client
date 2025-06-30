@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@bds/ui';
-import { rootStyle } from '@bds/ui/styles'; // Replace 'correctExportName' with the actual export name from the module
+import { rootStyle } from '@bds/ui/styles';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
