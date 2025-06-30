@@ -8,8 +8,8 @@ import { color } from './tokens/color.css';
 
 const tokens = {
   color: color,
+  fontStyles: fontStyles,
   ...typography,
-  fontStyles,
 };
 
 const properties = defineProperties({
