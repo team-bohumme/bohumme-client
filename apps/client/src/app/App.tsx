@@ -1,9 +1,11 @@
 import { Button } from '@bds/ui';
-
+import { ThemeProvider } from '@bds/ui';
 function App() {
   return (
     <>
-      <Button />
+      <ThemeProvider>
+        <Button />
+      </ThemeProvider>
     </>
   );
 }
