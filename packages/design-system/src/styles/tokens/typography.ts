@@ -20,8 +20,8 @@ export const typography = {
     normal: '150%',
   },
   letterSpacing: {
-    tight: '-1%',
-    none: '0%',
-    wide: '1%',
+    tight: '-0.01em',
+    none: '0',
+    wide: '0.01em',
   },
 } as const;
