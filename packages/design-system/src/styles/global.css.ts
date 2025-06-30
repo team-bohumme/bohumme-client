@@ -15,12 +15,13 @@ globalStyle('html, body', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  width: '100%',
+  width: themeVars.width.full,
   margin: '0',
   padding: '0',
   fontSize: '62.5%',
   scrollbarWidth: 'none',
   scrollBehavior: 'smooth',
+  fontFamily: `'SUIT Variable', sans-serif`,
 });
 
 globalStyle('::-webkit-scrollbar', {
@@ -30,7 +31,7 @@ globalStyle('::-webkit-scrollbar', {
 export const rootStyle = style({
   display: 'flex',
   flexDirection: 'column',
-  width: '100%',
+  width: themeVars.width.full,
   margin: '0 auto',
   minHeight: '100dvh',
   minWidth: 'var(--min-width)',
