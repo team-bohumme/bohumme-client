@@ -20,7 +20,6 @@ export default {
         'remove',
         'build',
         'deploy',
-        'perf',
       ],
     ],
     'subject-empty': [2, 'never'],
