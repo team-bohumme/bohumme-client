@@ -7,6 +7,10 @@ import { ChangeEvent, ChangeEventHandler, useCallback, useState } from 'react';
  * @param {string} [initialValue=""] - 입력값의 초기 상태를 지정합니다. 기본값은 빈 문자열("")입니다.
  * @param {(value: string) => string} [transformValue=(v: string) => v] - 입력값 변경 시 실행할 변환 함수입니다.
  *   기본값은 입력값을 그대로 반환하는 함수입니다.
+ *  * 예시:
+ * - 공백 제거: (v) => v.trim()
+ * - 소문자 변환: (v) => v.toLowerCase()
+ * - 대문자 변환: (v) => v.toUpperCase()
  *
  * @returns {[string, ChangeEventHandler<HTMLInputElement>]}
  * - 현재 입력값 상태 (string)
