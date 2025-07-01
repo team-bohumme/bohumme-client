@@ -18,4 +18,4 @@ pre-push:
 commit-msg:
   commands:
     lint-commit-msg:
-      run: sh .github/scripts/commitlint-wrapper.sh {1}
+      run: node commitlint.config.cjs {1}
