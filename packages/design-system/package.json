@@ -13,15 +13,16 @@
   "devDependencies": {
     "@bofit/eslint": "workspace:*",
     "@bofit/typescript": "workspace:*",
+    "@pivanov/vite-plugin-svg-sprite": "^3.0.0",
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.0.1",
+    "@vanilla-extract/css": "*",
+    "@vanilla-extract/sprinkles": "*",
+    "@vanilla-extract/vite-plugin": "*",
     "@vitejs/plugin-react": "^4.5.2",
     "typescript": "^5.3.3",
-    "@vanilla-extract/css": "*",
-    "@vanilla-extract/vite-plugin": "*",
-    "@vanilla-extract/sprinkles": "*",
     "vite": "*"
   },
   "dependencies": {
