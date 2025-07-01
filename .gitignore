@@ -30,3 +30,6 @@ tsconfig.tsbuildinfo
 
 # .eslint
 .eslintcache
+
+# .lefthook
+.lefthook
