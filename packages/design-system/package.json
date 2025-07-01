@@ -16,11 +16,9 @@
     "@bofit/eslint": "workspace:*",
     "@bofit/typescript": "workspace:*",
     "@chromatic-com/storybook": "4.0.1",
-    "@pandacss/dev": "*",
     "@storybook/addon-a11y": "9.0.14",
     "@storybook/addon-docs": "9.0.14",
     "@storybook/addon-onboarding": "9.0.14",
-    "@storybook/addon-vitest": "9.0.14",
     "@storybook/blocks": "^8.6.14",
     "@storybook/react-vite": "9.0.14",
     "@turbo/gen": "^1.12.4",
@@ -28,13 +26,10 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.0.1",
     "@vitejs/plugin-react": "^4.5.2",
-    "@vitest/browser": "^3.2.4",
-    "@vitest/coverage-v8": "^3.2.4",
     "eslint-plugin-storybook": "9.0.14",
     "playwright": "^1.53.2",
     "storybook": "9.0.14",
-    "typescript": "^5.3.3",
-    "vitest": "^3.2.4"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "react": "^19.1.0",
