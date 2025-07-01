@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { themeVars } from '../../styles/';
+import { themeVars } from '../../styles';
 
-import type { IconName } from '../../icons/icon-list';
+import type { IconName } from '../icon-list';
 
 type IconColor = keyof typeof themeVars.color;
 
