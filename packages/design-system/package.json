@@ -8,8 +8,7 @@
   },
   "scripts": {
     "lint": "eslint --max-warnings 0",
-    "build": "vite build",
-    "generate:component": "turbo gen react-component"
+    "build": "vite build"
   },
   "devDependencies": {
     "@bofit/eslint": "workspace:*",
