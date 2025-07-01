@@ -4,6 +4,8 @@ import { themeVars } from '../../styles';
 
 import type { IconName } from '../icon-list';
 
+import { sprIcon } from './icon.css';
+
 type IconColor = keyof typeof themeVars.color;
 
 type IconProps = {
@@ -13,6 +15,7 @@ type IconProps = {
   height?: number | string;
   color?: IconColor;
   className?: string;
+  rotate?: 90 | 180 | 270;
 } & React.SVGProps<SVGSVGElement>;
 
 export const Icon = ({
@@ -22,12 +25,24 @@ export const Icon = ({
   height,
   color,
   className,
+  rotate,
   ...rest
 }: IconProps) => {
   const computedWidth = width ?? size ?? 24;
   const computedHeight = height ?? size ?? 24;
 
-  const iconClass = className ?? '';
+  const rotateClass =
+    rotate === 90
+      ? sprIcon.rotate90
+      : rotate === 180
+        ? sprIcon.rotate180
+        : rotate === 270
+          ? sprIcon.rotate270
+          : '';
+
+  const combinedClass = [sprIcon.base, rotateClass, className]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <svg
@@ -39,7 +54,7 @@ export const Icon = ({
           ? `${computedHeight}px`
           : computedHeight
       }
-      className={iconClass}
+      className={combinedClass}
       style={color ? { color: themeVars.color[color] } : undefined}
       aria-hidden="true"
       {...rest}
