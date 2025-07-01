@@ -1,0 +1,25 @@
+pre-commit:
+  parallel: true #병렬 실행
+  commands:
+    eslint:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: npx eslint {staged_files} --fix #{staged_files}: git에 스테이징 된 파일 대상으로 실행
+      stage_fixed: true #lint로 자동 수정된 파일을 스테이징
+    prettier:
+      glob: '*.{js,ts,jsx,tsx,json,yaml,md,prettierrc}'
+      run: npx prettier --write {staged_files} #{staged_files}: git에 스테이징 된 파일 대상으로 실행
+      stage_fixed: true #prettier로 자동 수정된 파일을 스테이징
+
+pre-push:
+  commands:
+    type-check: #TypeScript 타입 체크
+      run: pnpm run type-check
+    lint-check:
+      run: npx eslint . --max-warnings=0
+    prettier-check:
+      run: npx prettier --check .
+
+commit-msg:
+  commands:
+    lint-commit-msg:
+      run: sh .github/scripts/commitlint-wrapper.sh {1}

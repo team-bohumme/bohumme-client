@@ -8,7 +8,10 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier": "prettier --write .",
+    "type-check": "tsc --noEmit -p ./tsconfig.json",
+    "commitlint-wrapper": "sh ./scripts/commitlint-wrapper.sh"
   },
   "dependencies": {
     "react": "^19.1.0",
