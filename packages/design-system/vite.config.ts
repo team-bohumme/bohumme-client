@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     vanillaExtractPlugin(),
     svgSpritePlugin({
-      iconDirs: ['src/icons'],
+      iconDirs: ['src/icons/icon'],
       symbolId: 'icon-[name]',
       inject: 'body-last',
     }),
