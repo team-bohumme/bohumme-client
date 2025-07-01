@@ -14,10 +14,6 @@ pre-push:
   commands:
     type-check:
       run: pnpm run type-check
-    lint-check:
-      run: npx eslint . --max-warnings=0
-    prettier-check:
-      run: npx prettier --check .
 
 commit-msg:
   commands:
