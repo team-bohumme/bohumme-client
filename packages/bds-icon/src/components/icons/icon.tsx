@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { IconName } from '../icon-list';
+import type { IconName } from '../../icon-list';
 
 import { sprIcon } from './icon.css';
 import { themeVars } from '@bds/ui/styles';
