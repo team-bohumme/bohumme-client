@@ -22,7 +22,6 @@
   "devDependencies": {
     "@bofit/eslint": "workspace:*",
     "@bofit/typescript": "workspace:*",
-    "@pandacss/dev": "*",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
     "@vanilla-extract/css": "*",
