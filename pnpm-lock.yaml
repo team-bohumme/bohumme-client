@@ -168,12 +168,12 @@ importers:
 
   packages/bds-icon:
     dependencies:
+      '@bds/ui':
+        specifier: 'workspace:'
+        version: link:../bds-ui
       react:
-        specifier: ^19.1.0
-        version: 19.1.0
-      react-dom:
         specifier: ^19.0.0
-        version: 19.1.0(react@19.1.0)
+        version: 19.1.0
     devDependencies:
       '@bofit/eslint':
         specifier: workspace:*
@@ -193,9 +193,6 @@ importers:
       '@types/react':
         specifier: ^19.1.8
         version: 19.1.8
-      '@types/react-dom':
-        specifier: ^19.0.1
-        version: 19.1.6(@types/react@19.1.8)
       '@vanilla-extract/css':
         specifier: '*'
         version: 1.17.4

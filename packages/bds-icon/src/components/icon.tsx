@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { themeVars } from '../../../bds-ui/src/styles';
-
 import type { IconName } from '../icon-list';
 
 import { sprIcon } from './icon.css';
+import { themeVars } from '@bds/ui/styles';
 
 type IconColor = keyof typeof themeVars.color;
 
