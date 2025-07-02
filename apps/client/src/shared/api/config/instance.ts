@@ -7,4 +7,3 @@ export const api = ky.create({
   },
   retry: { limit: 0 },
 });
-//커밋 테스트
