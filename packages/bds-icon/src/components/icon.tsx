@@ -15,6 +15,7 @@ type IconProps = {
   color?: IconColor;
   className?: string;
   rotate?: 90 | 180 | 270;
+  ariaHidden?: boolean;
 } & React.SVGProps<SVGSVGElement>;
 
 export const Icon = ({
@@ -25,6 +26,7 @@ export const Icon = ({
   color,
   className,
   rotate,
+  ariaHidden,
   ...rest
 }: IconProps) => {
   const computedWidth = width ?? size ?? 24;
@@ -55,7 +57,7 @@ export const Icon = ({
       }
       className={combinedClass}
       style={color ? { color: themeVars.color[color] } : undefined}
-      aria-hidden="true"
+      aria-hidden={ariaHidden}
       {...rest}
     >
       <use href={`#icon-${name}`} />
