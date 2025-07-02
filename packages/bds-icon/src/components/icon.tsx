@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { themeVars } from '../../styles';
+import { themeVars } from '../../../bds-ui/src/styles';
 
 import type { IconName } from '../icon-list';
 

@@ -1,16 +1,16 @@
 {
-  "name": "@bds/ui",
+  "name": "@bds/icon",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./src/components/index.ts",
-    "./styles": "./src/styles/index.ts",
-    "./icon": "./src/icons/index.ts"
+    ".": "./src/index.ts"
   },
   "scripts": {
     "lint": "eslint --max-warnings 0",
     "build": "vite build",
-    "generate:icons": "tsx src/icons/scripts/generate-icon-list.ts"
+    "generate:icons": "tsx src/scripts/generate-icon-list.ts"
   },
   "devDependencies": {
     "@bofit/eslint": "workspace:*",
@@ -19,7 +19,6 @@
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.0.1",
     "@vanilla-extract/css": "*",
     "@vanilla-extract/sprinkles": "*",
     "@vanilla-extract/vite-plugin": "*",
@@ -27,8 +26,7 @@
     "typescript": "^5.3.3",
     "vite": "*"
   },
-  "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.0.0"
+  "peerDependencies": {
+    "react": "^19.0.0"
   }
 }
