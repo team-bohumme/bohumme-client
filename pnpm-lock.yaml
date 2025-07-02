@@ -30,6 +30,9 @@ importers:
       '@vanilla-extract/vite-plugin':
         specifier: ^5.1.0
         version: 5.1.0(@types/node@20.19.1)(lightningcss@1.25.1)(vite@7.0.0(@types/node@20.19.1)(lightningcss@1.25.1))
+      '@vitejs/plugin-react':
+        specifier: ^4.5.2
+        version: 4.6.0(vite@7.0.0(@types/node@20.19.1)(lightningcss@1.25.1))
       '@vitejs/plugin-react-swc':
         specifier: ^3.10.2
         version: 3.10.2(vite@7.0.0(@types/node@20.19.1)(lightningcss@1.25.1))
@@ -107,7 +110,7 @@ importers:
         specifier: '*'
         version: 5.1.0(@types/node@20.19.1)(lightningcss@1.25.1)(vite@7.0.0(@types/node@20.19.1)(lightningcss@1.25.1))
       '@vitejs/plugin-react':
-        specifier: ^4.5.2
+        specifier: '*'
         version: 4.6.0(vite@7.0.0(@types/node@20.19.1)(lightningcss@1.25.1))
       eslint:
         specifier: ^8.44.0
@@ -273,7 +276,7 @@ importers:
         specifier: '*'
         version: 5.1.0(@types/node@20.19.1)(lightningcss@1.25.1)(vite@7.0.0(@types/node@20.19.1)(lightningcss@1.25.1))
       '@vitejs/plugin-react':
-        specifier: ^4.5.2
+        specifier: '*'
         version: 4.6.0(vite@7.0.0(@types/node@20.19.1)(lightningcss@1.25.1))
       storybook:
         specifier: 8.6.14
