@@ -19,5 +19,3 @@ function App() {
 }
 
 export default App;
-
-import 'virtual:svg-sprite';
