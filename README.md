@@ -626,6 +626,6 @@ const Button: FC<ButtonProps> = ({ text, onClick }) => {
 
 ---
 
-### 🎱 [보핏 팀 컨벤션 모아보기]()
+### 📸 BOFIT-CLIENT
 
 ------------------단체사진자리------------------
