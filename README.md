@@ -35,6 +35,8 @@
   </tr>
 </table>
 
+---
+
 ## 🚀 BOFIT 팀 기술 스택
 
 | 카테고리                    | 기술 스택                                                                                                                                                                                                                               |
@@ -51,6 +53,8 @@
 | **CI/CD**                   | ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white&style=for-the-badge) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=white&style=for-the-badge) |
 | **Web Server**              | ![NGINX](https://img.shields.io/badge/NGINX-009639?logo=nginx&logoColor=white&style=for-the-badge)                                                                                                                                      |
 | **Containerization**        | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge)                                                                                                                                   |
+
+---
 
 ## TEAM-BOFIT Convention
 
@@ -364,6 +368,8 @@ const Button: FC<ButtonProps> = ({ text, onClick }) => {
 ```
 
 </details>
+
+---
 
 # 팀 그라운드 룰 📋
 
