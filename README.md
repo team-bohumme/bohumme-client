@@ -56,11 +56,24 @@
 
 ### 💻 코딩 컨벤션
 
-<details>
-<summary>✅ 컴포넌트</summary>
+---
 
-- `interface` 네이밍은 반드시 `Props` 접미사 사용 → `CardProps`, `ChipProps`
-- 의미 없는 `<div>` 사용 지양, 컴포넌트 최상단은 `Fragment` (`<>...</>`) 사용
+## ✅ 컴포넌트
+
+> 💡 **컴포넌트 작성 시 핵심 원칙**
+>
+> - 재사용 가능하고 명확한 구조로 설계
+> - 비즈니스 로직과 디자인 시스템 분리
+
+### 📋 네이밍 규칙
+
+- **Interface**: 반드시 `Props` 접미사 사용
+  - ✅ `CardProps`, `ChipProps`
+  - ❌ `Card`, `ChipInterface`
+
+### 🏗️ 구조화 원칙
+
+- **Fragment 사용**: 의미 없는 `<div>` 지양
 
 ```tsx
 const InfoText = () => {
@@ -73,111 +86,158 @@ const InfoText = () => {
 };
 ```
 
-- children이 불필요할 때는 self-closing `<Component />` 사용
-- Headless UI 개념 명시 (디자인 시스템 컴포넌트는 비즈니스 로직 최소화)
-- 특정 도메인에 의존된 컴포넌트는 디자인 시스템이 아닌 client 내부에 작성
+- **Self-closing**: Children이 불필요할 때는 `<Component />` 사용
+- **Headless UI**: 디자인 시스템 컴포넌트는 비즈니스 로직 최소화
+- **도메인 분리**: 특정 도메인 의존 컴포넌트는 client 내부에 작성
 
-</details>
+---
 
-<details>
-<summary>📁 폴더명</summary>
+## 📁 폴더명
 
-- 무조건 소문자 시작
-- 항상 복수형으로 s 붙이기
-- 케밥 케이스(kebab-case) 사용 (예: components, user-pages)
+> 🎯 **일관된 폴더 구조로 프로젝트 관리**
 
-</details>
+| 규칙            | 설명                        | 예시                      |
+| --------------- | --------------------------- | ------------------------- |
+| **소문자 시작** | 모든 폴더명은 소문자로 시작 | `components`, `utils`     |
+| **복수형**      | 항상 복수형으로 s 붙이기    | `pages`, `hooks`          |
+| **케밥 케이스** | 단어 연결 시 하이픈 사용    | `user-pages`, `api-utils` |
 
-<details>
-<summary>📝 타입</summary>
+---
 
-- 웬만하면 interface 사용 권장 (병합 가능)
-- type은 병합 불가능하므로 특별한 경우에만 사용
-- 유니언, 튜플, 리터럴 타입 등 특수한 경우 type 사용
+## 📝 타입
 
-</details>
+> 🔧 **TypeScript 타입 정의 가이드**
 
-<details>
-<summary>🔑 변수</summary>
+### 🎯 선택 기준
 
-- var 사용 금지
-- const → let 순서로 위에서부터 선언
-- 문자열 조합 시 + 금지, 템플릿 리터럴(`) 사용
-- 상수는 대문자 스네이크 케이스 → API_KEY
-- 의미가 명확한 변수명 사용 (길어도 괜찮음)
-- boolean 변수에는 is 접두사 붙이기 → isActive
-- key에 랜덤 값 사용 금지
-- 정적 리스트에 한해 index 사용 가능
-- 동적 리스트에서는 고유한 id를 key로 사용
-
-</details>
-
-<details>
-<summary>⚙️ 함수</summary>
-
-- 함수명은 동사+명사 형태 사용
-- get: 값 반환
-- create: 새 값 생성
-- check: 로직 검증
-- convert: 변환
-- add, minus: 더하거나 빼기
-- filter: 배열 필터링
-- 이벤트 핸들러에는 handle 접두사 붙이기
-  - 예: handleResetClick, handleSubmitClick
-- 유틸 함수는 반환값 기준으로 네이밍 (ex. hasEmail)
-- 중복 함수는 utils 폴더에 모아 재사용 (2개 이상 도메인에서 쓰일 때)
-- 함수는 화살표 함수로 작성
-
-</details>
-
-<details>
-<summary>🧩 메소드</summary>
-
-- 배열 복사 시 스프레드 연산자 ... 사용
+| 타입          | 사용 시기   | 특징                      |
+| ------------- | ----------- | ------------------------- |
+| **interface** | 기본 권장   | 병합 가능, 확장성 좋음    |
+| **type**      | 특수한 경우 | 유니언, 튜플, 리터럴 타입 |
 
 ```tsx
-const copies = [...originals];
+// ✅ 권장: interface 사용
+interface UserProps {
+  name: string;
+  age: number;
+}
+
+// ✅ 특수한 경우: type 사용
+type Status = 'loading' | 'success' | 'error';
+type Position = [number, number];
 ```
 
-- for 대신 forEach 또는 map 사용
-- 구조 분해 할당 적극 활용
+---
+
+## 🔑 변수
+
+> 📌 **명확하고 일관된 변수 선언**
+
+### 🚫 금지 사항
+
+- **var 사용 금지**: `const` → `let` 순서로 선언
+- **문자열 연결 금지**: `+` 대신 템플릿 리터럴 사용
+
+### ✅ 네이밍 규칙
+
+| 타입          | 규칙                         | 예시                    |
+| ------------- | ---------------------------- | ----------------------- |
+| **상수**      | 대문자 스네이크 케이스       | `API_KEY`, `MAX_COUNT`  |
+| **Boolean**   | `is` 접두사                  | `isActive`, `isLoading` |
+| **일반 변수** | 의미 명확한 이름 (길어도 OK) | `userProfileData`       |
+
+### 🔑 Key 사용 규칙
+
+- **정적 리스트**: index 사용 가능
+- **동적 리스트**: 고유한 id 사용 필수
+- **랜덤 값**: key로 사용 금지
+
+---
+
+## ⚙️ 함수
+
+> 🎯 **명확한 함수 네이밍과 구조**
+
+### 📋 네이밍 패턴
+
+| 접두사        | 용도          | 예시                      |
+| ------------- | ------------- | ------------------------- |
+| **get**       | 값 반환       | `getUserData`             |
+| **create**    | 새 값 생성    | `createUser`              |
+| **check**     | 로직 검증     | `checkValidation`         |
+| **convert**   | 변환          | `convertToString`         |
+| **add/minus** | 연산          | `addToCart`, `minusCount` |
+| **filter**    | 배열 필터링   | `filterActiveUsers`       |
+| **handle**    | 이벤트 핸들러 | `handleSubmitClick`       |
+
+### 🏗️ 구조 규칙
+
+- **함수 형태**: 동사+명사 조합
+- **이벤트 핸들러**: `handle` 접두사 필수
+- **유틸 함수**: 반환값 기준 네이밍 (`hasEmail`, `isEmpty`)
+- **재사용**: 2개 이상 도메인에서 사용 시 utils 폴더로 이동
+- **선언 방식**: 화살표 함수 사용
+
+---
+
+## 🧩 메소드
+
+> 🔄 **효율적인 데이터 처리 방법**
+
+### 📊 배열 처리
 
 ```tsx
-interface VoteAllInfoProps {
-  date: number;
-}
+// ✅ 스프레드 연산자 사용
+const copies = [...originals];
 
-interface UserDataProps {
-  userName: string;
-  userBirth: string;
-}
+// ✅ 함수형 메소드 사용
+items.forEach((item) => processItem(item));
+items.map((item) => transformItem(item));
+```
 
+### 🎯 구조 분해 할당
+
+```tsx
+// Props 구조 분해
 const MonthVoting = ({ date, time }: VoteAllInfoProps) => {
-  /* ... */
+  // 컴포넌트 로직
 };
 
+// 함수 매개변수 구조 분해
 function checkIsUser({ userName, userBirth }: UserDataProps) {
-  /* ... */
+  // 검증 로직
 }
 ```
 
-</details>
+---
 
-<details>
-<summary>🎨 스타일</summary>
+## 🎨 스타일
 
-- 시맨틱 태그 적극 활용 (MDN 문서 참고)
-- 의미 없는 `<div>` 사용 금지
-- Wrapper가 필요하면 Container 네이밍 사용
+> 🏗️ **의미 있는 HTML 구조**
 
-</details>
+### 📋 핵심 원칙
 
-<details>
-<summary>📚 Storybook</summary>
+| 원칙                 | 설명                        | 예시                               |
+| -------------------- | --------------------------- | ---------------------------------- |
+| **시맨틱 태그**      | 의미에 맞는 태그 사용       | `<header>`, `<nav>`, `<main>`      |
+| **div 지양**         | 의미 없는 div 사용 금지     | `<section>`, `<article>` 활용      |
+| **Container 네이밍** | Wrapper 필요 시 명확한 이름 | `UserContainer`, `LayoutContainer` |
 
-- 컴포넌트 설명에 interface 설명 포함
+📖 **참고 자료**: [MDN HTML 시맨틱 태그 가이드](https://developer.mozilla.org/ko/docs/Web/HTML/Element)
 
-예시:
+---
+
+## 📚 Storybook
+
+> 📖 **컴포넌트 문서화 가이드**
+
+### 🎯 문서화 원칙
+
+- **Interface 설명**: 모든 Props에 대한 명확한 설명 포함
+- **사용 예시**: 다양한 시나리오별 Story 작성
+- **시각적 테스트**: 컴포넌트의 모든 상태 검증
+
+### 📋 Story 구조 예시
 
 ```tsx
 import type { Meta, StoryObj } from '@storybook/react';
@@ -192,10 +252,11 @@ const meta: Meta<typeof Box> = {
     docs: {
       description: {
         component: `
-Box 컴포넌트는 제목과 버튼이 포함된 컨테이너입니다.
+📦 Box 컴포넌트는 제목과 버튼이 포함된 컨테이너입니다.
 
+**Props 설명:**
 - \`title\`: 박스 상단 제목
-- \`showMore\`: 버튼 노출 여부
+- \`showMore\`: 버튼 노출 여부  
 - \`showMoreText\`: 버튼 텍스트
 - \`path\`: 클릭 시 이동 경로
 - \`children\`: 콘텐츠 영역
@@ -211,15 +272,12 @@ Box 컴포넌트는 제목과 버튼이 포함된 컨테이너입니다.
     ),
   ],
   tags: ['autodocs'],
-  args: {
-    title: '박스 제목',
-    children: <p>콘텐츠 영역입니다.</p>,
-  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Box>;
 
+// 🎯 기본 사용 예시
 export const Default: Story = {
   args: {
     title: '박스 제목',
@@ -227,6 +285,7 @@ export const Default: Story = {
   },
 };
 
+// 🔗 더보기 버튼 예시
 export const WithButtonLabel: Story = {
   name: '더보기 버튼',
   args: {
@@ -236,28 +295,46 @@ export const WithButtonLabel: Story = {
     children: <p>더보기 버튼이 있는 콘텐츠</p>,
   },
 };
-
-export const WithAllButton: Story = {
-  name: '전체보기 버튼',
-  args: {
-    showMore: true,
-    showMoreText: '전체보기',
-    path: '/all',
-    children: <p>전체보기 콘텐츠</p>,
-  },
-};
 ```
 
-</details>
+---
 
-<details>
-<summary>⚛️ React</summary>
+## ⚛️ React
 
-- 고차 컴포넌트는 with 접두사 사용 → withAuth
-- Context는 Context 접미사 사용 → UserContext
-- React 타입은 개별 import 사용 → ReactNode (권장) / React.ReactNode (비권장)
+> 🏗️ **React 패턴 및 네이밍 규칙**
 
-</details>
+### 📋 컴포넌트 패턴
+
+| 패턴              | 규칙             | 예시                          |
+| ----------------- | ---------------- | ----------------------------- |
+| **고차 컴포넌트** | `with` 접두사    | `withAuth`, `withLoading`     |
+| **Context**       | `Context` 접미사 | `UserContext`, `ThemeContext` |
+| **Custom Hook**   | `use` 접두사     | `useAuth`, `useLocalStorage`  |
+
+### 🎯 타입 Import 규칙
+
+```tsx
+// ✅ 권장: 개별 import
+import { ReactNode, FC } from 'react';
+
+// ❌ 비권장: 네임스페이스 import
+import React from 'react';
+const node: React.ReactNode = <div />;
+```
+
+### 🔧 컴포넌트 선언 방식
+
+```tsx
+// ✅ 권장: 화살표 함수 + 타입 정의
+interface ButtonProps {
+  text: string;
+  onClick: () => void;
+}
+
+const Button: FC<ButtonProps> = ({ text, onClick }) => {
+  return <button onClick={onClick}>{text}</button>;
+};
+```
 
 ### 📏 그라운드 룰
 
