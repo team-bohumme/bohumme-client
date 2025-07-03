@@ -58,7 +58,25 @@
 
 ## TEAM-BOFIT Convention
 
-### 💻 코딩 컨벤션
+## 📭 Git Convention
+
+### Git Flow
+
+```
+# main branch
+`main` 브랜치는 배포 가능한 상태만을 관리합니다
+
+# develop branch
+`develop` 브랜치는 통합 브랜치 역할을 하며, 평소에는 해당 브랜치를 기반으로 `Feature branch` 를 분기, 통합을 거치며 개발을 진행해요.
+모든 기능이 정상적으로 동작할 수 있는 안정적인 상태를 유지하고,
+develop branch 가 배포 가능한 상태면 `main`브랜치에 `merge` 하여 배포 CI/CD Flow 를 진행합니다.
+
+# 피쳐 브랜치(Feature branch)
+develop 브랜치에서 분기
+develop 브랜치로 merge
+```
+
+### 💻 Coding Convention
 
 <details>
 <summary>✅ 컴포넌트</summary>
@@ -371,7 +389,7 @@ const Button: FC<ButtonProps> = ({ text, onClick }) => {
 
 ---
 
-# 팀 그라운드 룰 📋
+# Ground Rule 📋
 
 ## 🌟 기본 원칙
 
