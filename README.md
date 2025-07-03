@@ -62,19 +62,16 @@
 
 ### Git Flow
 
-```
-# main branch
-`main` 브랜치는 배포 가능한 상태만을 관리합니다
+- **main branch**  
+  `main` 브랜치는 언제나 배포 가능한 안정된 상태만 관리합니다.
 
-# develop branch
-`develop` 브랜치는 통합 브랜치 역할을 하며, 평소에는 해당 브랜치를 기반으로 `Feature branch` 를 분기, 통합을 거치며 개발을 진행해요.
-모든 기능이 정상적으로 동작할 수 있는 안정적인 상태를 유지하고,
-develop branch 가 배포 가능한 상태면 `main`브랜치에 `merge` 하여 배포 CI/CD Flow 를 진행합니다.
+- **develop branch**  
+  `develop` 브랜치는 통합 브랜치로, 모든 기능 개발이 이곳을 기반으로 진행됩니다.  
+  평소에는 `develop`에서 기능별 `Feature branch`를 분기하고, 개발이 완료된 후 다시 `develop`으로 병합합니다.  
+  `develop` 브랜치는 항상 안정적인 상태를 유지하며, 배포 가능한 상태가 되면 `main` 브랜치로 병합하여 CI/CD를 통해 배포를 진행합니다.
 
-# 피쳐 브랜치(Feature branch)
-develop 브랜치에서 분기
-develop 브랜치로 merge
-```
+- **Feature branch (피쳐 브랜치)**  
+  `develop` 브랜치에서 분기하여 기능별 개발을 진행하고, 완료 후 다시 `develop` 브랜치로 병합합니다.
 
 ### 💻 Coding Convention
 
