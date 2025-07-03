@@ -27,14 +27,6 @@ jobs:
           echo "PNPM PATH: $(which pnpm)"
           pnpm --version
 
-      - name: Cache pnpm store
-        uses: actions/cache@v3
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-
       - name: 📥 Install dependencies
         run: pnpm install
 
