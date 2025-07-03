@@ -23,10 +23,11 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-      - name: 📦 Setup pnpm
+      - name: 📦 Install pnpm
         run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
+          npm install -g pnpm
+          echo "PNPM PATH: $(which pnpm)"
+          pnpm --version
 
       - name: 📥 Install dependencies
         run: pnpm install
