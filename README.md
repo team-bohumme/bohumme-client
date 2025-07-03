@@ -72,7 +72,7 @@
   평소에는 `develop`에서 기능별 `Feature branch`를 분기하고, 개발이 완료된 후 다시 `develop`으로 병합합니다.  
   `develop` 브랜치는 항상 안정적인 상태를 유지하며, 배포 가능한 상태가 되면 `main` 브랜치로 병합하여 CI/CD를 통해 배포를 진행합니다.
 
-- **Feature branch (피쳐 브랜치)**  
+- **Feature branch**
   `develop` 브랜치에서 분기하여 기능별 개발을 진행하고, 완료 후 다시 `develop` 브랜치로 병합합니다.
 
 ---
