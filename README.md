@@ -56,8 +56,6 @@
 
 ### 💻 코딩 컨벤션
 
-### 💻 코딩 컨벤션
-
 <details>
 <summary>✅ 컴포넌트</summary>
 
