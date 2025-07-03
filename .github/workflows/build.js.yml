@@ -4,31 +4,34 @@
 name: Build Test
 
 on:
-  push:
-    branches: [ "develop" ]
   pull_request:
-    branches: [ "develop" ]
+    branches:
+      - develop
+  push:
+    branches:
+      - '**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 🛎 Checkout repository
       - uses: actions/checkout@v3
 
-      - name: Use Node.js 20
+      - name: 🧰 Setup Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: 20
+          cache: 'pnpm'
 
-      - name: Install pnpm
+      - name: 📦 Setup pnpm
         run: |
-          npm install -g pnpm
-          echo "PNPM PATH: $(which pnpm)"
-          pnpm --version
+          corepack enable
+          corepack prepare pnpm@latest --activate
 
-      - name: Install dependencies
+      - name: 📥 Install dependencies
         run: pnpm install
 
-      - name: Run build
+      - name: 🛠 Run build
         run: pnpm build
