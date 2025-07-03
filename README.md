@@ -35,7 +35,22 @@
   </tr>
 </table>
 
-## BOFIT 팀 기술 스택
+## 🚀 BOFIT 팀 기술 스택
+
+| 카테고리                    | 기술 스택                                                                                                                                                                                                                               |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **UI Library**              | ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=for-the-badge)                                                                                                                                      |
+| **Server State Management** | ![TanStack Query](https://img.shields.io/badge/TanStack%20Query-FF4154?logo=reactquery&logoColor=white&style=for-the-badge)                                                                                                             |
+| **Language**                | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge)                                                                                                                       |
+| **Build Tool**              | ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge)                                                                                                                                         |
+| **Styling**                 | ![Vanilla Extract](https://img.shields.io/badge/Vanilla%20Extract-DD8A42?style=for-the-badge)                                                                                                                                           |
+| **Design System**           | ![Storybook](https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white&style=for-the-badge)                                                                                                                          |
+| **Repository Management**   | ![Monorepo](https://img.shields.io/badge/Monorepo-000000?style=for-the-badge)                                                                                                                                                           |
+| **Build System**            | ![Turborepo](https://img.shields.io/badge/Turborepo-EC4A3F?style=for-the-badge)                                                                                                                                                         |
+| **Package Manager**         | ![Pnpm](https://img.shields.io/badge/Pnpm-F69220?logo=pnpm&logoColor=white&style=for-the-badge)                                                                                                                                         |
+| **CI/CD**                   | ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?logo=jenkins&logoColor=white&style=for-the-badge) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=white&style=for-the-badge) |
+| **Web Server**              | ![NGINX](https://img.shields.io/badge/NGINX-009639?logo=nginx&logoColor=white&style=for-the-badge)                                                                                                                                      |
+| **Containerization**        | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge)                                                                                                                                   |
 
 ## TEAM-BOFIT Convention
 
