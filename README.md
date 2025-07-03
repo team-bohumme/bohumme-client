@@ -73,6 +73,8 @@
 - **Feature branch (피쳐 브랜치)**  
   `develop` 브랜치에서 분기하여 기능별 개발을 진행하고, 완료 후 다시 `develop` 브랜치로 병합합니다.
 
+---
+
 ### 💻 Coding Convention
 
 <details>
