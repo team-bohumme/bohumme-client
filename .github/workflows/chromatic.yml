@@ -58,7 +58,7 @@ jobs:
         with:
           comment_tag: ${{ github.event.number }}-storybook
           message: |
-            ✅ Storybook 프리뷰가 배포되었습니다.
+            ✅ Storybook이 배포되었습니다.
             🔗 [바로가기](${{ steps.chromatic.outputs.storybookUrl }})
 
       - name: Comment PR on Failure
