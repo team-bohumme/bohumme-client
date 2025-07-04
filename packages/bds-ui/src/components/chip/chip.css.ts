@@ -3,19 +3,18 @@ import { recipe } from '@vanilla-extract/recipes';
 import { themeVars } from '../../styles/theme.css';
 
 export const chipVariants = recipe({
-  base: [
-    themeVars.fontStyles.body1_m_12,
-    {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: themeVars.color.gray800,
-    },
-  ],
+  base: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...themeVars.fontStyles.body1_m_12,
+    color: themeVars.color.gray800,
+  },
+
   variants: {
     color: {
-      gray: { color: themeVars.color.whiteBackground },
-      primary: { color: themeVars.color.primary200 },
+      gray: { backgroundColor: themeVars.color.whiteBackground },
+      primary: { backgroundColor: themeVars.color.primary200 },
     },
     size: {
       rectangular: {
