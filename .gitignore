@@ -33,3 +33,7 @@ tsconfig.tsbuildinfo
 
 # .lefthook
 .lefthook
+
+# Storybook
+*storybook.log
+storybook-static
