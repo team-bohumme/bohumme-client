@@ -15,6 +15,7 @@
     "@bds/ui": "workspace:"
   },
   "devDependencies": {
+    "@bds/ui": "workspace:",
     "@bofit/eslint": "workspace:*",
     "@bofit/typescript": "workspace:*",
     "@pivanov/vite-plugin-svg-sprite": "^3.0.0",
