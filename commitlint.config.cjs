@@ -19,6 +19,8 @@ const allowedTypes = [
   'remove',
   'build',
   'deploy',
+  'Merge',
+  'merge',
 ];
 
 const commitRegex = /^(\w+):\s{1,2}(.+)$/;
