@@ -30,5 +30,10 @@ tsconfig.tsbuildinfo
 
 # .eslint
 .eslintcache
+
+# .lefthook
+.lefthook
+
+# Storybook
 *storybook.log
 storybook-static
