@@ -1,10 +1,14 @@
 import { Icon } from '@bds/icon';
+import { Navigation } from '@bds/ui';
 
 const HomePage = () => {
   return (
     <div>
-      home-page 배포 테스트입니다 하룰라라
-      <Icon name="add" />
+      <Navigation
+        leftIcon={<Icon name="arrow_left" />}
+        rightIcon={<Icon name="home" />}
+        title="커뮤니티"
+      />
     </div>
   );
 };
