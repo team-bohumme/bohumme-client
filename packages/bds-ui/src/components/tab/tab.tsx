@@ -21,6 +21,7 @@ function Item({ value }: { value: string }) {
       onClick={() => setSelectedTab(value)}
     >
       {value}
+      {value === selectedTab && <hr className={styles.tabLine} />}
     </div>
   );
 }

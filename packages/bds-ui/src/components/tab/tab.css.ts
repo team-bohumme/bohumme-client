@@ -36,3 +36,9 @@ export const tabItem = recipe({
     },
   },
 });
+
+export const tabLine = style({
+  width: '5rem',
+  border: `0.1rem solid ${themeVars.color.gray900}`,
+  borderRadius: '0.2rem',
+});
