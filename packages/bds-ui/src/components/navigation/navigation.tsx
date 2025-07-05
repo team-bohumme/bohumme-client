@@ -18,7 +18,7 @@ const Navigation = ({
   return (
     <nav className={styles.navigationVariants({ backgroundColor })}>
       {leftIcon}
-      <div className={styles.center}>{title}</div>
+      <div className={styles.title}>{title}</div>
       {rightIcon}
     </nav>
   );
