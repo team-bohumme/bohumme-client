@@ -3,7 +3,7 @@ import { type ReactNode } from 'react';
 import * as styles from './chip.css';
 
 interface ChipProps {
-  label: ReactNode;
+  label: string;
   color: 'gray' | 'primary';
   size: 'rectangular' | 'rounded';
   outline?: boolean;
